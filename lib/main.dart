@@ -6,6 +6,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smartwheels/splashscreen.dart';
+
+import 'customwidgetss/bgcolor.dart';
+import 'homepage.dart';
 late double height;
 late double width;
 void main()  {
@@ -35,10 +38,12 @@ class TestApp extends StatelessWidget {
             appBarTheme: AppBarTheme(
                 backgroundColor: Colors.black
             ),
-            scaffoldBackgroundColor:Colors.black
+
         ),
         debugShowCheckedModeBanner: false,
-        home:SplashScreenPage(),
+        home:GradientBackground(
+          child:  HomepagePage(),
+        ),
 
       ),
     );
