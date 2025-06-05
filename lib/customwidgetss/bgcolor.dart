@@ -17,7 +17,7 @@ class GradientBackground extends StatelessWidget {
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          stops: [0.3, 0.7, 0.9],
+          stops: [0.3, 0.5, 0.9],
         ),
       ),
       child: child,
