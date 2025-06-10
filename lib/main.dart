@@ -34,6 +34,7 @@ class TestApp extends StatelessWidget {
       child: MaterialApp(
 
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.transparent,
             textTheme: GoogleFonts.poppinsTextTheme(),
             appBarTheme: AppBarTheme(
                 backgroundColor: Colors.black
