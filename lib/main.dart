@@ -37,7 +37,7 @@ class TestApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.transparent,
             textTheme: GoogleFonts.poppinsTextTheme(),
             appBarTheme: AppBarTheme(
-                backgroundColor: Colors.black
+                backgroundColor: Colors.transparent
             ),
 
         ),
