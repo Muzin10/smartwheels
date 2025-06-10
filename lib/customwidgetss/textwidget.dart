@@ -11,7 +11,7 @@ class TextSW extends StatelessWidget {
   const TextSW({
     required this.text,
     this.fontSize,
-    this.color = Colors.white,
+    this.color = Colors.black,
     this.fontWeight = FontWeight.bold,
   });
 
