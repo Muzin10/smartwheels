@@ -1,37 +1,40 @@
-import 'package:flutter/material.dart';
 
-import 'constants/colorconstants/colorconstants.dart';
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
+import 'homepage.dart';
 import 'loginpage.dart';
 
-class SplashScreenPage extends StatefulWidget {
-  const SplashScreenPage({super.key});
-
+class SplashScreen extends StatefulWidget {
   @override
-  State<SplashScreenPage> createState() => _SplashScreenPageState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenPageState extends State<SplashScreenPage> {
-
+class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
-    // TODO: implement initState
-    Future.delayed(Duration(
-        seconds: 5
-    )).then((value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginpagePage(),)), );
     super.initState();
+
+    // Navigate to homepage after 3 seconds
+    Timer(const Duration(seconds: 5), () {
+      Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) =>LoginPage (),) );
+    });
   }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorConstant.blackColor,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(image: AssetImage("assetName"))
-          ],
+    final width = MediaQuery.of(context).size.width;
 
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Lottie.asset(
+          'assets/iconimages/Animation - 1750141287118.json',
+          width: width * 0.7,
         ),
-    )
+      ),
     );
   }
 }

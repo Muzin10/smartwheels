@@ -47,6 +47,7 @@ class _OtpPageState extends State<OtpPage> {
 
                   ),
                   InkWell(
+                    onTap:() =>  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomepagePage(),)),
 
                     child: Container(
                       height: height*0.06,

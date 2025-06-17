@@ -43,7 +43,7 @@ class TestApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         home:GradientBackground(
-          child:  HomepagePage(),
+          child:  SplashScreen(),
         ),
 
       ),

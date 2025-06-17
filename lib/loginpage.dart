@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'customwidgetss/textwidget.dart';
 import 'login2page.dart';
+import 'otpPage.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -29,11 +30,6 @@ class LoginPage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   TextSW(
-                    style:  TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey,
-                    ),
                     text: "Sign up",
                   ),
                    SizedBox(height: 10),
@@ -77,7 +73,7 @@ class LoginPage extends StatelessWidget {
                           horizontal: 80, vertical: 16),
                     ),
                     onPressed: () {
-                      // Add OTP logic here
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => OtpPage(),));
                     },
                     child:  Text("Send OTP",
                     style: TextStyle(
